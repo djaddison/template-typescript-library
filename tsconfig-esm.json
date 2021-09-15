@@ -1,0 +1,27 @@
+{
+  "compilerOptions": {
+    "outDir": "dist/esm",                      // tsc output folder
+    "target": "ES2020",                        // level of JS supported by target platform
+    "module": "ES2020",                        // which module system tsc will use when it outputs code. ES2020 = ES Modules
+    "declaration": true,                       // have tsc generate type definitions
+
+    "allowJs": true,                           // Allow JavaScript files to be imported inside your project, instead of just .ts and .tsx files
+    "esModuleInterop": true,                   // enable import * and default helpers for compatibility
+    "experimentalDecorators": true,            // Enables experimental support for decorators, which is in stage 2 of the TC39 standardization process
+    "forceConsistentCasingInFileNames": true,  // disallow inconsistently-cased references to the same file
+    "importHelpers": true,                     // Downleveling helper functions are imported once from the tslib module instead inserted into every file that uses them
+    "isolatedModules": true,                   // Setting the isolatedModules flag tells TypeScript to warn you if you write certain code that can’t be correctly interpreted by a single-file transpilation process
+    "jsx": "react",                            // Controls how JSX constructs are emitted in JavaScript files
+    "noFallthroughCasesInSwitch": true,        // Report errors for fallthrough cases in switch statement
+    "skipLibCheck": true,                      // skip type checking of all declaration files. Needed for transitive dependencies
+    "sourceMap": true,                         // Enables the generation of sourcemap files
+    "strict": true,                            // enable all strict type checking options
+    "moduleResolution": "Node"
+  },
+  "include": [
+    "src/**/*"                                 // which files to include in the compilation process
+  ],
+  "exclude": [
+    "src/**/*/*.test.ts"                       // don't compile tests
+  ]
+}
