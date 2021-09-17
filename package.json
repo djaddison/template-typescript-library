@@ -7,10 +7,17 @@
   "scripts": {
     "prepublishOnly": "tsc --project tsconfig-esm.json",
     "start": "tsc --project tsconfig-esm.json --watch",
+
     "build": "tsc --project tsconfig-esm.json",
     "build:clean": "rm -rf dist",
     "build:realclean": "rm -rf dist node_modules yarn",
-    "code:format": "prettier --config .prettierrc src/**/*.{js,jsx,ts,tsx,json,css,scss,md} --write"
+    
+    "format:code": "prettier --config .prettierrc src/**/*.ts --write",
+
+    "test": "# TODO: Add unit test quality checks",
+    "lint": "# TODO: Add linting quality checks",
+    "e2e": "# TODO: Add e2e quality checks",
+    "check:code:format": "prettier --config .prettierrc src/**/*.ts --check"
   },
   "type": "module",
   "sideEffects": false,
